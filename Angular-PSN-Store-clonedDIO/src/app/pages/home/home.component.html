@@ -1,0 +1,28 @@
+<app-hero-banner
+  *ngIf="featuredGame"
+  [heroTitle]="featuredGame.title"
+  [heroCover]="featuredGame.cover"
+  [heroBadge]="featuredGame.label"
+  [heroSubtitle]="featuredGame.subtitle"
+  [heroPrice]="featuredGame.price"
+  [heroUrl]="featuredGame.url"
+></app-hero-banner>
+
+<div class="explore-section">
+  <h2 class="explore-title">Top Jogos mais jogados da PlayStation</h2>
+  <div class="filter-pills">
+    </div>
+</div>
+
+<div class="home__container">
+   <app-card
+    *ngFor="let game of gamesList"
+		[gameTitle]="game.title"
+    [gameCover]="game.cover"
+    [gameLabel]="game.label"
+    [gameType]="game.type"
+    [gamePrice]="game.price"
+		[gameUrl]="game.url"
+  >
+  </app-card>
+</div>

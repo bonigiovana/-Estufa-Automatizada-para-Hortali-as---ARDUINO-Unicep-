@@ -1,0 +1,11 @@
+<a [href]="gameUrl" target="_blank" rel="noopener noreferrer" class="card__container">
+	<img class="card__img" [src]="gameCover" [alt]="gameTitle">
+
+	<app-card-label [gameLabel]="gameLabel"></app-card-label>
+
+	<app-card-pricing
+	[gameTitle]="gameTitle"
+	[gameType]="gameType"
+	[gamePrice]="gamePrice"
+	></app-card-pricing>
+</a>
